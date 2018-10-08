@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Roboto;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidenav {
+    flex-basis: 25%;
+    background: #4285F4;
+    padding: 1rem;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.4)
+}
+
+.map-wrapper {
+    flex-basis: 75%;
+}
+
+.sidenav h2 {
+    text-align: center;
+    color: #fff;
+    margin: 20px;
+}
+
+.sidenav .input-wrapper {
+    display: block;
+}
+
+.sidenav .input-wrapper label {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.sidenav .input-wrapper input {
+    border: none;
+    width: 100%;
+    padding: 8px;
+    margin: .5rem 0;
+    border-radius: 4px;
+}
+
+#getDirections {
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    margin: .5rem 0;
+    cursor: pointer;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map .loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid lightgray;
+    border-top-color: #4285F4;
+    animation: spin .7s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
