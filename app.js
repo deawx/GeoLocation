@@ -43,3 +43,23 @@ function load() {
         );
     }
 }
+
+getDirections.addEventListener("click", function (event) {
+    const directionsService = new google.maps.DirectionsService();
+    const directionsDisplay = new google.maps.DirectionsRenderer();
+    map = new google.maps.Map(
+        mapEle, {
+            zoom: 17,
+        });
+    directionsDisplay.setMap(map);
+    const request = {
+        origin: source.value,
+        destination: destination.value,
+        travelMode: 'DRIVING'
+    };
+    directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+        directionsDisplay.setDirections(result);
+    }
+    });
+});
