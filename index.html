@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidenav">
+            <h2>Get The Directions</h2>
+            <div class="input-wrapper">
+                <label for="source">Starting Point</label>
+                <input id="source" name="source" type="text">
+            </div>
+            <div class="input-wrapper">
+                <label for="destination">Destination</label>
+                <input name="destination" id="destination" type="text">
+            </div>
+            <div class="input-wrapper">
+                <button id="getDirections">Get Directions</button>
+            </div>
+        </div>
+        <div class="map-wrapper">
+            <div id="map">
+                <span class="loading"></span>
+            </div>
+        </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDflYr5kSbvunD9PZai-TAdDRYwTeLABTk&callback=load">
+    </script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
